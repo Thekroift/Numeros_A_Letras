@@ -1,11 +1,12 @@
-converNumToLetras(double numero) {
+
+convertirnumeroALetras(double numero) {
   String num = '${numero}0';
-  String entero = num.substring(0, num.indexOf('.'));
-  double n = double.parse(entero);
+  String subn = num.substring(0, num.indexOf('.'));
+  double entero = double.parse(subn);
   String decimal = num.substring(num.indexOf('.') + 1);
 
   var res =
-      '${numeroALetras(n.round())} PESOS ${decimal.substring(0, 2)}/100 M.N.';
+      '${numeroALetras(entero.round())} PESOS ${decimal.substring(0, 2)}/100 M.N.';
   return res;
 }
 
